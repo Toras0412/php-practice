@@ -24,7 +24,8 @@ $device = 'mac';
 
 if ($device == 'windows' || $device == 'mac') {
     echo '使用OSは、'.$device.'です。';
-} else { echo'どちらでもありません。';
+} else {
+      echo'どちらでもありません。';
 }
 
 
@@ -33,40 +34,41 @@ $age = 18;
 
 $message = ($age >= 18) ? '成人':'未成年';
 
-echo($message.'です。');
+echo ($message.'です。');
 
 
 // Q6 配列
-$kanto = ['群馬県','茨城県','栃木県','千葉県','埼玉県','東京都','神奈川県'];
+$kantos = ['群馬県','茨城県','栃木県','千葉県','埼玉県','東京都','神奈川県'];
 
-echo $kanto[2].'と'.$kanto[3].'は関東地方の都道府県です。';
+echo $kantos[2].'と'.$kantos[3].'は関東地方の都道府県です。';
 
 
 // Q7 連想配列-1
 
-$syozaiti = ['東京都' => '新宿区', '神奈川県' => '横浜市','千葉県' => '千葉市','埼玉県' => 'さいたま市','栃木県' => '宇都宮市','群馬県' => '前橋市','茨城県' => '水戸市'];
+$syozaiti = ['東京都' => '新宿区', '神奈川県' => '横浜市','千葉県' => '千葉市','埼玉県' => 'さいたま市',
+             '栃木県' => '宇都宮市','群馬県' => '前橋市','茨城県' => '水戸市'];
 
 foreach ($syozaiti as $key => $value){
-  echo $value;
-  echo "\n";
+    echo $value;
+    echo "\n";
 }
 
 // Q8 連想配列-2
 foreach ($syozaiti as $key => $value){
-  if($key == '埼玉県'){
- echo $key.'の県庁所在地は、'.$value.'です。';
+    if($key == '埼玉県'){
+    echo $key.'の県庁所在地は、'.$value.'です。';
  }
  }
 
 // Q9 連想配列-3
 
 foreach ($syozaiti as $key => $value){
-    if( in_array($key, $kant)){
+    if( in_array($key, $kantos)){
         echo "\n";
-            echo $key.'の県庁所在地は、'.$value.'です。';
+        echo $key.'の県庁所在地は、'.$value.'です。';
         
     }else {
-            echo "\n";
+        echo "\n";
         echo  $key.'は関東地方ではありません。';
         }
 }
@@ -100,7 +102,7 @@ function distinguishNum($number)
 {
   if($number % 2 == 1 ){
       echo $number.'は奇数です。';
-}else { echo $number.'は偶数です。';
+  }else { echo $number.'は偶数です。';
 }
 }
 
