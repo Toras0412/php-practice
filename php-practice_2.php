@@ -1,29 +1,20 @@
 <?php
 // Q1 tic-tac問題
 for ($i = 1; $i <= 100; $i++ ) {
-    if($i%4 === 0 and $i%5 === 0) {
-    echo "\n";
-    echo 'tic-tac';
+    if($i % 4 === 0 and $i % 5 === 0) {
+    echo "\n".'tic-tac';
     continue;
 }
-  if($i%4 === 0) {
-      echo "\n";
-      echo 'tic';
+  if($i % 4 === 0) {
+      echo "\n".'tic';
       continue;
 }
-  if($i%5 === 0) {
-      echo "\n";
-      echo 'tac';
+  if($i % 5 === 0) {
+      echo "\n".'tac';
       continue;
       
 }
-  if($i%4 === 0 and $i%5 === 0) {
-      echo "\n";
-      echo 'tic-tac';
-      continue;
-}
-      echo "\n";
-      echo $i;
+      echo "\n".$i;
 }
 
 
@@ -33,8 +24,7 @@ echo $personalInfos[1]['name'].'の電話番号は'.$personalInfos[1]['tel'].'�
 
 // q2
 foreach($personalInfos as $num  => $data) {
-    echo "\n";
-    echo  $num + 1 .'番目の'.$data['name'].'さんのメールアドレスは'.$data['mail'].'で、電話番号は'.$data['tel'].'です。';
+    echo "\n".$num + 1 .'番目の'.$data['name'].'さんのメールアドレスは'.$data['mail'].'で、電話番号は'.$data['tel'].'です。';
 }
 
 // q3
@@ -75,8 +65,7 @@ echo "\n";
 $day1 = new DateTime("1992-04-25");
 $day2 = new DateTime();
 $diff =  $day1->diff($day2)->days;
-echo 'あの日から'.$diff. '日経過しました。';
-echo "\n";
+echo 'あの日から'.$diff. '日経過しました。'."\n";
 
 
 

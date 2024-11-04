@@ -14,6 +14,7 @@ echo $num / 2;
 
 // Q3 日付操作
 
+date_default_timezone_set('Asia/Tokyo');
 $time = date("Y年m月d日 H時i分s秒");
 echo '現在時刻は、'.$time.'です。';
 
@@ -48,28 +49,25 @@ echo $kantos[2].'と'.$kantos[3].'は関東地方の都道府県です。';
 $syozaiti = ['東京都' => '新宿区', '神奈川県' => '横浜市','千葉県' => '千葉市','埼玉県' => 'さいたま市',
              '栃木県' => '宇都宮市','群馬県' => '前橋市','茨城県' => '水戸市'];
 
-foreach ($syozaiti as $key => $value){
-    echo $value;
-    echo "\n";
+foreach ($syozaiti as $ken => $KentyouSyozaiti){
+    echo $KentyouSyozaiti."\n";
 }
 
 // Q8 連想配列-2
-foreach ($syozaiti as $key => $value){
-    if($key == '埼玉県'){
-    echo $key.'の県庁所在地は、'.$value.'です。';
+foreach ($syozaiti as $ken => $KentyouSyozaiti){
+    if($ken == '埼玉県'){
+    echo $ken.'の県庁所在地は、'.$KentyouSyozaiti.'です。';
  }
  }
 
 // Q9 連想配列-3
 
-foreach ($syozaiti as $key => $value){
-    if( in_array($key, $kantos)){
-        echo "\n";
-        echo $key.'の県庁所在地は、'.$value.'です。';
+foreach ($syozaiti as $ken => $KentyouSyozaiti){
+    if( in_array($ken, $kantos)){
+        echo "\n".$ken.'の県庁所在地は、'.$KentyouSyozaiti.'です。';
         
     }else {
-        echo "\n";
-        echo  $key.'は関東地方ではありません。';
+        echo  "\n".$ken.'は関東地方ではありません。';
         }
 }
 
@@ -89,27 +87,25 @@ hello('安藤');
 function calcTaxInPrice($price)
 {
   $taxInPrice = $price * 1.1;
-  echo $price.'円の商品の税込価格は'.$taxInPrice.'円です。';
+  return $price.'円の商品の税込価格は'.$taxInPrice.'円です。';
+  
 }
 
-echo "\n";
-calcTaxInPrice(1000);
-echo "\n";
-calcTaxInPrice(2000);
+echo "\n".calcTaxInPrice(1000);
+echo "\n".calcTaxInPrice(2000);
 
 // Q12 関数とif文
 function distinguishNum($number)
 {
   if($number % 2 == 1 ){
-      echo $number.'は奇数です。';
-  }else { echo $number.'は偶数です。';
+      return $number.'は奇数です。';
+  }else {
+    return $number.'は偶数です。';
 }
 }
 
-echo "\n";
-distinguishNum(11);
-echo "\n";
-distinguishNum(24);
+echo "\n".distinguishNum(11);
+echo "\n".distinguishNum(24);
 
 // Q13 関数とswitch文
 function evaluateGrade($seiseki)
@@ -117,25 +113,23 @@ function evaluateGrade($seiseki)
     switch ($seiseki) {
         case 'A':
         case 'B':
-            echo '合格です。';
+            return '合格です。';
             break;
             
         case 'C':
-            echo '合格ですが追加課題があります';
+            return '合格ですが追加課題があります';
             break;
             
         case 'D':
-            echo '不合格です。';
+            return '不合格です。';
             break;
             
         default:
-            echo '判定不明です。講師に問い合わせてください。';
+            return '判定不明です。講師に問い合わせてください。';
             break;
 }
 }
-echo "\n";
-evaluateGrade('A');
-echo "\n";
-evaluateGrade('E');
+echo "\n".evaluateGrade('A');
+echo "\n".evaluateGrade('E');
 
 ?>
