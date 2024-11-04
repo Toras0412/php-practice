@@ -60,6 +60,7 @@ foreach ($syozaiti as $ken => $KentyouSyozaiti){
  }
  }
 
+ 
 // Q9 連想配列-3
 
 foreach ($syozaiti as $ken => $KentyouSyozaiti){

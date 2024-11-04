@@ -18,6 +18,7 @@ for ($i = 1; $i <= 100; $i++ ) {
 }
 
 
+
 // Q2 多次元連想配列
 // q1
 echo $personalInfos[1]['name'].'の電話番号は'.$personalInfos[1]['tel'].'です。';
