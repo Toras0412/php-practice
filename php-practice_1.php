@@ -56,8 +56,8 @@ foreach ($syozaiti as $ken => $KentyouSyozaiti){
 // Q8 連想配列-2
 foreach ($syozaiti as $ken => $KentyouSyozaiti){
     if($ken == '埼玉県'){
-    echo $ken.'の県庁所在地は、'.$KentyouSyozaiti.'です。';
- }
+        echo $ken.'の県庁所在地は、'.$KentyouSyozaiti.'です。';
+    }
  }
 
  
@@ -101,8 +101,8 @@ function distinguishNum($number)
   if($number % 2 == 1 ){
       return $number.'は奇数です。';
   }else {
-    return $number.'は偶数です。';
-}
+     return $number.'は偶数です。';
+   }
 }
 
 echo "\n".distinguishNum(11);
@@ -128,7 +128,7 @@ function evaluateGrade($seiseki)
         default:
             return '判定不明です。講師に問い合わせてください。';
             break;
-}
+    }
 }
 echo "\n".evaluateGrade('A');
 echo "\n".evaluateGrade('E');

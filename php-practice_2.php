@@ -2,18 +2,17 @@
 // Q1 tic-tac問題
 for ($i = 1; $i <= 100; $i++ ) {
     if($i % 4 === 0 and $i % 5 === 0) {
-    echo "\n".'tic-tac';
-    continue;
-}
+        echo "\n".'tic-tac';
+        continue;
+    }
   if($i % 4 === 0) {
       echo "\n".'tic';
       continue;
-}
+  }
   if($i % 5 === 0) {
       echo "\n".'tac';
       continue;
-      
-}
+  }
       echo "\n".$i;
 }
 
